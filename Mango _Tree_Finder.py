@@ -1,12 +1,8 @@
 row = int(input())  # 10
-col = int(input())  # 20
+col = int(input())  # 22
 tree_num = int(input())
-trees =[]
-for i in range(1,col+1):
-    trees.append(i)
-    trees.append(col*row-col+i)
-    
-for i in range(1,col*row,col):
-    trees.append(i)
 
-print(True if tree_num in trees else False)
+if(tree_num<=col or tree_num%col==0 or tree_num%col==1):
+    print(True)
+else:
+    print(False)
